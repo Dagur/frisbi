@@ -6,8 +6,8 @@ function getRandomInt(max) {
   return Math.floor(Math.random() * Math.floor(max));
 }
 
-const discs = ["Putter", "Mid", "Driver", "Understable", "Overstable", "Wild"];
-const throws = ["Backhand", "Forehand", "Roller", "Hyzer", "Anhyzer", "Wild"];
+const discs = ["Putter", "Midrange", "Driver", "Understable", "Overstable", "Wildcard"];
+const throws = ["Backhand", "Forehand", "Roller", "Hyzer", "Anhyzer", "Wildcard"];
 
 function App() {
   const [dice, setDice] = React.useState("");
