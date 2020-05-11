@@ -1,23 +1,29 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React from "react";
+import logo from "./logo.svg";
+import "./App.css";
+
+function getRandomInt(max) {
+  return Math.floor(Math.random() * Math.floor(max));
+}
+
+const discs = ["Putter", "Mid", "Driver", "Understable", "Overstable", "Wild"];
+const throws = ["Backhand", "Forehand", "Roller", "Hyzer", "Anhyzer", "Wild"];
 
 function App() {
+  const [dice, setDice] = React.useState("");
+
+  const roll = () => {
+    setDice(`${discs[getRandomInt(6)]} ${throws[getRandomInt(6)]}`);
+  };
+
   return (
     <div className="App">
       <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
+        {/* <img src={logo} className="App-logo" alt="logo" /> */}
+        <p>{dice}</p>
+        <button className="App-link" onClick={roll}>
+          Kasta
+        </button>
       </header>
     </div>
   );
