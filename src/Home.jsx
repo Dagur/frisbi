@@ -10,6 +10,7 @@ const discs = [
   "Putter",
   "Midrange",
   "Driver",
+  "Stable",
   "Understable",
   "Overstable",
   "Wildcard"
