@@ -1,0 +1,36 @@
+{
+  "en": {
+    "locale": "en",
+    "App": {
+      "Throw": "Throw",
+      "Putter": "Putter",
+      "Midrange": "Midrange",
+      "Driver": "Driver",
+      "Understable": "Understable",
+      "Overstable": "Overstable",
+      "Wildcard": "Wildcard",
+      "Backhand": "Backhand",
+      "Forehand": "Forehand",
+      "Roller": "Roller",
+      "Hyzer": "Hyzer",
+      "Anhyzer": "Anhyzer"
+    }
+  },
+  "is": {
+    "locale": "is",
+    "App": {
+      "Throw": "Kasta",
+      "Putter": "Pútter",
+      "Midrange": "Miðari",
+      "Driver": "Drífari",
+      "Understable": "Understable",
+      "Overstable": "Overstable",
+      "Wildcard": "Frjálst val",
+      "Backhand": "Bakhönd",
+      "Forehand": "Forhönd",
+      "Roller": "Rúlla",
+      "Hyzer": "Hæser",
+      "Anhyzer": "Anhæser"
+    }
+  }
+}
