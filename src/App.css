@@ -31,6 +31,7 @@ a:active {
   justify-content: center;
   font-size: calc(30px + 2vmin);
   color: whitesmoke;
+  gap: 4rem;
 }
 
 .throw-button {
@@ -48,6 +49,21 @@ a:active {
   transition: transform 1s;
 }
 
-.throw.odd {
+.odd .throw {
   transform: rotate(360deg);
+}
+
+@keyframes slideIn {
+  0% {
+    transform: translateY(100%);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+
+.original {
+  font-size: 0.3em;
+  animation: 1s ease-out 0s 1 slideIn;
 }

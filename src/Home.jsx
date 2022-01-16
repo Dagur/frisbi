@@ -13,7 +13,7 @@ const discs = [
   "Stable",
   "Understable",
   "Overstable",
-  "Wildcard"
+  "Wildcard",
 ];
 const throws = [
   "Backhand",
@@ -21,14 +21,16 @@ const throws = [
   "Roller",
   "Hyzer",
   "Anhyzer",
-  "Wildcard"
+  "Wildcard",
 ];
 
-function Home(translations) {
+function Home({ lang }) {
   const t = useTranslate("App");
+  const isEn = lang === "en";
   const [disc, setDisc] = React.useState("");
   const [yeet, setYeet] = React.useState("");
   const [counter, setCounter] = React.useState(0);
+  const [showEn, setShowEn] = React.useState(false);
 
   useEffect(() => {
     setDisc(discs[getRandomInt(discs.length)]);
@@ -36,9 +38,11 @@ function Home(translations) {
   }, []);
 
   const roll = () => {
+    setShowEn(false);
     setDisc(discs[getRandomInt(discs.length)]);
     setYeet(throws[getRandomInt(throws.length)]);
     setCounter(counter + 1);
+    setTimeout(() => !isEn && setShowEn(true), 500);
   };
 
   const odd = Boolean(counter % 2);
@@ -46,8 +50,15 @@ function Home(translations) {
   return (
     <>
       <div className="app-main">
-        <p className={`throw ${odd ? "odd" : ""}`}>{t(yeet)}</p>
-        <p className={`throw ${odd ? "" : "odd"}`}>{t(disc)}</p>
+        <span className={odd ? "odd" : ""}>
+          <div className="throw">{t(yeet)}</div>
+          {showEn ? <div className="original">({yeet})</div> : <div></div>}
+        </span>
+
+        <span className={odd ? "odd" : ""}>
+          <div className="throw">{t(disc)}</div>
+          {showEn ? <div className="original">({disc})</div> : <div></div>}
+        </span>
       </div>
       <button className="throw-button" onClick={roll}>
         {t("Throw")}

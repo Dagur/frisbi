@@ -17,7 +17,7 @@ export default function App() {
           path="/"
           element={
             <TranslatorProvider translations={translations.is}>
-              <Home />
+              <Home lang="is" />
             </TranslatorProvider>
           }
         />
@@ -25,7 +25,7 @@ export default function App() {
           path="/en"
           element={
             <TranslatorProvider translations={translations.en}>
-              <Home />
+              <Home lang="en" />
             </TranslatorProvider>
           }
         />
