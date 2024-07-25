@@ -45,6 +45,10 @@ a:active {
   height: 20vh;
 }
 
+.throw-button:disabled {
+  background-color: gray;
+}
+
 .throw {
   transition: transform 1s;
 }
